@@ -7,10 +7,10 @@ Requires libnotify
    ```
    mkdir -p ~/.config/polybar/scripts/arch
   ```
-
 2. copy files from git
 
 3. add lines to polybar config file
+
 ```
 font-0 = fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
