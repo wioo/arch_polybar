@@ -14,13 +14,13 @@ list of updates
 ![Image 1](https://i.imgur.com/UMR6LOI.png)
 
 
-Usage:
+**Usage:**
 
-left click: executes trizen
+* left click: executes trizen
 
-right click: refresh
+* right click: refresh
 
-middle click: show list of updates
+* middle click: show list of updates
 
 
 This setup uses "Awesome Font"
