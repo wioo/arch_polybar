@@ -1,9 +1,31 @@
 # arch_polybar
 Check for updates on Arch system (scripts for polybar)
 
+no updates
+
+![Image 1](https://i.imgur.com/jaV91Uo.png)
+
+updates
+
+![Image 1](https://i.imgur.com/H96Ugtr.png)
+
+list of updates
+
+![Image 1](https://i.imgur.com/UMR6LOI.png)
+
+
+Usage:
+
+left click: executes trizen
+
+right click: refresh
+
+middle click: show list of updates
+
+
 This setup uses "Awesome Font"
 
-Requires libnotify
+Requires libnotify, trizen, urxvt
 
 1. Create directories (polybar, scripts, arch) under ~/.config
    ```
