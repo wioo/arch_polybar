@@ -3,7 +3,6 @@
 # Terminate already running bar instances
 
 #kill all scripts (arch linux updates)
-#kill -9 -$(ps -o pgid -p $(cat ~/.config/polybar/scripts/arch/arch_update.pid) | tail -n1 | cut -c 1-)
 kill -9 -$(ps -o pgid -p $(cat ~/.config/polybar/scripts/arch/arch_update.pid) | tail -n1 | sed 's/^[ \t]*//;s/[ \t]*$//')
 kill -9 -$(ps -o pgid -p $(pgrep -o polybar_updates) | tail -n1 | cut -c 1-)
 
