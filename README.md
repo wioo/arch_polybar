@@ -38,7 +38,14 @@ left_click -> left_click.sh
 notify -> notify.sh
 polybar_updates -> updates.sh
 
-5. 
+5. Change your i3 config
+delete bar section
+
+add
+```
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+```
+
 
 
 
