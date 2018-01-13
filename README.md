@@ -6,7 +6,7 @@ Requires libnotify
 1. Create directories (polybar, scripts, arch) under ~/.config
    ```
    mkdir -p ~/.config/polybar/scripts/arch
-  ```
+   ```
 2. copy files from git
 
 3. add lines to polybar config file
