@@ -4,8 +4,10 @@ This setup uses "Awesome Font"
 Requires libnotify
 
 1. Create directories (polybar, scripts, arch) under ~/.config
-    mkdir -p ~/.config/polybar/scripts/arch
-  
+   ```
+   mkdir -p ~/.config/polybar/scripts/arch
+  ```
+
 2. copy files from git
 
 3. add lines to polybar config file
@@ -22,8 +24,6 @@ font-5 = Font Awesome 5 Brands:pixelsize=10;1
 type = custom/script
 exec = polybar_updates
 tail = true
-;interval = 600
-;format-foreground = #e6005R
 label = %output%
 format = <label>
 format-prefix = " "
