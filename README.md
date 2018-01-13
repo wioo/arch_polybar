@@ -1,6 +1,8 @@
 # arch_polybar
 Check for updates on Arch system (scripts for polybar)
+
 This setup uses "Awesome Font"
+
 Requires libnotify
 
 1. Create directories (polybar, scripts, arch) under ~/.config
