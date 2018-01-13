@@ -35,9 +35,13 @@ click-middle = notify
 ```
 
 4. create symbolic links in e.g. /usr/bin or ~/bin
+
 arch_update once -> arch_update_once.sh
+
 left_click -> left_click.sh
+
 notify -> notify.sh
+
 polybar_updates -> updates.sh
 
 5. Change your i3 config
