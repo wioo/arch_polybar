@@ -39,6 +39,7 @@ notify -> notify.sh
 polybar_updates -> updates.sh
 
 5. Change your i3 config
+
 delete bar section
 
 add
