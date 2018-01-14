@@ -22,7 +22,7 @@ list of updates
 
 * left click: executes trizen
 
-* right click: refresh
+* right click: manual refresh
 
 * middle click: show list of updates
 
