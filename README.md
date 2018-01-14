@@ -60,6 +60,8 @@ click-left = left_click
 click-middle = notify
 ```
 
+Add "updates-arch" to modules-left or modules-right section.
+
 4. create symbolic links in e.g. /usr/bin or ~/bin
 
 arch_update once -> arch_update_once.sh
