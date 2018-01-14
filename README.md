@@ -29,7 +29,7 @@ list of updates
 
 This setup uses "Awesome Font"
 
-Requires libnotify,  trizen, urxvt, awk and notification-daemon (show the updates) like dunst or similar...
+Requires: libnotify, trizen, urxvt, awk and notification-daemon (show the updates) like dunst or similar...
 
 1. Create directories (polybar, scripts, arch) under ~/.config
    ```
