@@ -1,14 +1,13 @@
 #!/bin/sh
-  
+
 
 nb_arch=$(checkupdates | wc -l)
 nb_aur=$(trizen -Su --aur --quiet | wc -l)
 
-updates=$(("$nb_arch" + "$nb_aur"))
-
 while true;
 do
 echo "Updates" > ~/.config/polybar/scripts/arch/packages
+updates=$(("$nb_arch" + "$nb_aur"))
 
 if [ "$updates" -gt 0 ]; then
 
@@ -37,4 +36,5 @@ fi
 sleep 600
 
 done
+
 
