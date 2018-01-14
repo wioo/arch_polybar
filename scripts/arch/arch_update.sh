@@ -1,40 +1,19 @@
 #!/bin/sh
 
+path=${HOME}/.config/polybar/scripts/arch/
 
-nb_arch=$(checkupdates | wc -l)
-nb_aur=$(trizen -Su --aur --quiet | wc -l)
+while true; do
+   checkupdates | nl -w2 -s '. ' >| ${path}repo.pkgs
+   trizen -Su --aur --quiet | sed 's/://;s/==/-/' >| ${path}aur.pkgs
+   updates=$(cat ${path}*.pkgs | wc -l)
 
-while true;
-do
-echo "Updates" > ~/.config/polybar/scripts/arch/packages
-updates=$(("$nb_arch" + "$nb_aur"))
+   echo "0" >| ${path}status
+   [ $updates -gt 0 ] && echo "%{F#e60053}$updates" >| ${path}status
 
-if [ "$updates" -gt 0 ]; then
+   >| ${path}packages
+   [ -s ${path}repo.pkgs ] && cat ${path}repo.pkgs >> ${path}packages
+   [ -s ${path}repo.pkgs ] && [ -s ${path}aur.pkgs ] && printf "\n" >> ${path}packages
+   [ -s ${path}aur.pkgs ] && sed '1iAUR Updates' ${path}aur.pkgs >> ${path}packages
 
-        echo "%{F#e60053}$updates" > ~/.config/polybar/scripts/arch/status
-else
-    echo "0" > ~/.config/polybar/scripts/arch/status
-fi
-
-if [ "$nb_arch" -ne "0" ]; then
-        if [ "$nb_aur" -eq "0" ];then
-        checkupdates | nl -w2 -s'. ' >> ~/.config/polybar/scripts/arch/packages
-      else
-        checkupdates | nl -w2 -s'. ' >> ~/.config/polybar/scripts/arch/packages
-        echo -e "\nAUR updates" >> ~/.config/polybar/scripts/arch/packages
-        trizen -Su --aur --quiet | awk  '{print substr($2, 1, length($2) - 1) " " $3 " -> " $5}'| nl -w2 -s '. ' >> ~/.config/polybar/scripts/arch/packages
-       fi
-else
-if [ "$nb_aur" -eq "0" ];then
-        echo "" > /dev/null
-        else
-        echo "AUR updates" > ~/.config/polybar/scripts/arch/packages
-        trizen -Su --aur --quiet | awk  '{print substr($2, 1, length($2) - 1) " " $3 " -> " $5}'| nl -w2 -s '. ' >> ~/.config/polybar/scripts/arch/packages
-       fi
-fi
-
-sleep 600
-
+   sleep 600
 done
-
-
