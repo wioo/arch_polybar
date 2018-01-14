@@ -25,7 +25,7 @@ list of updates
 
 This setup uses "Awesome Font"
 
-Requires libnotify, trizen, urxvt
+Requires libnotify, trizen, urxvt, awk
 
 1. Create directories (polybar, scripts, arch) under ~/.config
    ```
