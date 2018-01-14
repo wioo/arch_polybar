@@ -1,9 +1,10 @@
 #!/bin/sh
+  
 
-updates_arch=$(checkupdates | tee ~/.config/polybar/scripts/arch/packages | wc -l)
-updates_aur=$(trizen -Su --aur --quiet | tee -a ~/.config/polybar/scripts/arch/packages |  wc -l)
+nb_arch=$(checkupdates | wc -l)
+nb_aur=$(trizen -Su --aur --quiet | wc -l)
 
-updates=$(("$updates_arch" + "$updates_aur"))
+updates=$(("$nb_arch" + "$nb_aur"))
 
 while true;
 do
@@ -25,11 +26,10 @@ if [ "$nb_arch" -ne "0" ]; then
         trizen -Su --aur --quiet >> ~/.config/polybar/scripts/arch/packages
        fi
 else
-echo "" > ~/.config/polybar/scripts/arch/packages
 if [ "$nb_aur" -eq "0" ];then
         echo "" > /dev/null
         else
-        echo -e "AUR updates" > ~/.config/polybar/scripts/arch/packages
+        echo "AUR updates" > ~/.config/polybar/scripts/arch/packages
         trizen -Su --aur --quiet >> ~/.config/polybar/scripts/arch/packages
        fi
 fi
@@ -37,4 +37,3 @@ fi
 sleep 600
 
 done
-
