@@ -1,5 +1,5 @@
 # arch_polybar
-Check for updates on Arch system (scripts for polybar)
+Check for updates on Arch system with i3-wm(optional) and polybar
 
 no updates
 
