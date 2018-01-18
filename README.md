@@ -56,8 +56,8 @@ label = %output%
 format = <label>
 format-prefix = " "
 click-right = arch_update_once&
-click-left = left_click
-click-middle = notify
+click-left = left_click&
+click-middle = notify&
 ```
 
 Add "updates-arch" to modules-left or modules-right section.
