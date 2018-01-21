@@ -27,7 +27,7 @@ list of updates
 * middle click: show list of updates
 
 
-This setup uses "Awesome Font"
+This setup uses "Font Awesome"
 
 Requires: libnotify, trizen, urxvt, sed and notification-daemon like dunst or similar...
 
