@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
   
 path=${HOME}/.config/polybar/scripts/arch/
 
