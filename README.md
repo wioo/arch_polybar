@@ -57,7 +57,7 @@ format = <label>
 format-prefix = " "
 click-right = "arch_updates -u&"
 click-left = "arch_updates -c&"
-click-middle = "arch_updates -c&"
+click-middle = "arch_updates -n&"
 ```
 
 4. create symbolic link in e.g. /usr/bin or ~/bin
