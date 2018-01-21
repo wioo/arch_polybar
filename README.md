@@ -3,19 +3,19 @@ Check for updates on Arch system with i3-wm(optional) and polybar
 
 no updates
 
-![Image 1](https://i.imgur.com/jaV91Uo.png)
+![Image 1](https://i.imgur.com/H7rKgiX.png)
 
 working
 
-![Image 1](https://i.imgur.com/9c1pAd9.png)
+![Image 1](https://i.imgur.com/98eSzTU.png)
 
 updates
 
-![Image 1](https://i.imgur.com/H96Ugtr.png)
+![Image 1](https://i.imgur.com/PQNtLNz.png)
 
 list of updates
 
-![Image 1](https://i.imgur.com/zjX6ZDV.png)
+![Image 1](https://i.imgur.com/ZCV15ls.png)
 
 
 **Usage:**
