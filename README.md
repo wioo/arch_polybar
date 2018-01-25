@@ -51,7 +51,7 @@ font-5 = Font Awesome 5 Brands:pixelsize=10;1
 
 [module/updates-arch]
 type = custom/script
-exec = "arch_updates -s&"
+exec = "arch_updates -s"
 tail = true
 format = <label>
 format-prefix = " "
