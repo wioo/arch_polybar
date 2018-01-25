@@ -19,7 +19,7 @@ function status {
 
 function check_for_updates {
    checkupdates | nl -w2 -s '. ' >| ${path}repo.pkgs
-   trizen -Su --aur --quiet | sed 's/://;s/==/-/' >| ${path}aur.pkgs
+   trizen -Su --aur --quiet | sed 's/://;s/==/-/;s/[[:space:]]\+/ /g' >| ${path}aur.pkgs
    updates=$(cat ${path}*.pkgs | wc -l)
 
    echo "0" >| ${path}status
