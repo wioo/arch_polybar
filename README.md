@@ -35,7 +35,7 @@ Requires: libnotify, trizen, urxvt, sed and notification-daemon like dunst or si
    ```
    mkdir -p ~/.config/polybar/scripts/arch
    ```
-2. copy files from git and make them executable
+2. copy files from github and make them executable
 
 3. edit polybar config file.
 Add:
