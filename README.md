@@ -29,7 +29,7 @@ list of updates
 
 This setup uses "Font Awesome"
 
-Requires: libnotify, trizen, urxvt, sed and notification-daemon like dunst or similar...
+Requires: libnotify, yay, urxvt, sed and notification-daemon like dunst or similar...
 
 1. Create directories (scripts, arch) under ~/.config/polybar
    ```
