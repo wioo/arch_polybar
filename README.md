@@ -20,7 +20,7 @@ list of updates
 
 **Usage:**
 
-* left click: executes trizen
+* left click: executes  "yay --noconfirm -Syu"
 
 * right click: manual refresh
 
