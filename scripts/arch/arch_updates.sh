@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
-  
+
 path=${HOME}/.config/polybar/scripts/arch/
+#trap 'exit' SIGINT
 
 function main_loop {
         while true; do
+        echo '' > ~/.config/polybar/scripts/arch/status
         check_for_updates
         sleep 600
         done
@@ -19,7 +21,7 @@ function status {
 
 function check_for_updates {
    checkupdates | nl -w2 -s '. ' >| ${path}repo.pkgs
-   trizen -Su --aur --quiet | sed 's/://;s/==/-/;s/[[:space:]]\+/ /g' >| ${path}aur.pkgs
+   yay -Qu --aur | nl -w2 -s '. '  >| ${path}aur.pkgs
    updates=$(cat ${path}*.pkgs | wc -l)
 
    echo "0" >| ${path}status
@@ -36,12 +38,12 @@ if [[ $(cat ~/.config/polybar/scripts/arch/status) -eq 0 ]]
 then
         notify-send 0
 else
-        notify-send "$(cat .config/polybar/scripts/arch/packages)"
-fi
+        notify-send "$(cat ~/.config/polybar/scripts/arch/packages)"
+fi   
 }
 
 function upgrade {
-urxvt -e trizen --noconfirm -Syu
+urxvt -e yay --noconfirm -Syu
 echo "0" > ~/.config/polybar/scripts/arch/status
 }
 
