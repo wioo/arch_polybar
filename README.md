@@ -29,26 +29,19 @@ list of updates
 
 This setup uses "Font Awesome"
 
-Requires: libnotify, yay, urxvt, sed and notification-daemon like dunst or similar...
+Requires: libnotify, yay or aurutils (also pacman-contrib if using aurutils), urxvt, sed and notification-daemon like dunst or similar...
 
 1. Create directories (scripts, arch) under ~/.config/polybar
    ```
    mkdir -p ~/.config/polybar/scripts/arch
    ```
 2. copy files from github and make them executable
+optionally change yay to aurutils in arch_updates.sh
 
 3. edit polybar config file.
 Add:
 
 ```
-font-0 = fixed:pixelsize=10;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
-font-3 = Font Awesome 5 Free:pixelsize=10;1
-font-4 = Font Awesome 5 Free Solid:pixelsize=10;1
-font-5 = Font Awesome 5 Brands:pixelsize=10;1
-
-
 [module/updates-arch]
 type = custom/script
 exec = "arch_updates -s"
@@ -56,13 +49,15 @@ tail = true
 format = <label>
 format-prefix = " "
 click-right = "arch_updates -u&"
-click-left = "arch_updates -c&"
-click-middle = "arch_updates -n"
+click-left = "arch_updates -q&"
+click-middle = "arch_updates -c"
 ```
 
 4. create symbolic link in e.g. /usr/bin or ~/bin
 
 arch_updates -> ~/.config/polybar/scripts/arch/arch_updates.sh
+
+If using aurutils put clean_aurutils_cache to /usr/bin or ~/bin
 
 5. Change your i3 config
 
