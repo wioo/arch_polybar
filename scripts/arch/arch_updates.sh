@@ -63,7 +63,7 @@ path=${HOME}/.config/polybar/scripts/arch/
   upgrade() {
     if [ -s ${path}repo.pkgs ]; then
       [ -s ${path}aur.pkgs ] && urxvt -tr  -sh 20 -fg white -bg black -e sh -c "aur sync -c -u --noview && sudo pacman -Syu --noconfirm" || \
-                                urxvt -tr  -sh 20 -fg white -bg black -e sh -c "echo bedenj | sudo -S true > /dev/null 2>&1 && sudo pacman -Syu --noconfirm"
+                                urxvt -tr  -sh 20 -fg white -bg black -e sh -c "sudo pacman -Syu --noconfirm"
       echo "%{T7}0%{T-}" > ${path}status && >| ${path}repo.pkgs && >| ${path}aur.pkgs
     elif [ -s ${path}aur.pkgs ]; then
       urxvt -tr  -sh 20 -fg white -bg black -e sh -c "aur sync -c -u --noview && sudo pacman -Syu --noconfirm"
@@ -81,7 +81,7 @@ path=${HOME}/.config/polybar/scripts/arch/
   }
 
   clean() {
-    urxvt -tr -sh 20 -fg white -bg black -e sh -c "clean_aurutils_cache; echo bedenj | sudo -S true && sudo pacman -Sc"
+    urxvt -tr -sh 20 -fg white -bg black -e sh -c "clean_aurutils_cache && sudo pacman -Sc"
   }
 
   flagged() {
